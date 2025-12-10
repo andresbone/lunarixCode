@@ -1,0 +1,18 @@
+# Archivos compilados y carpeta target de Maven
+target/
+*.class
+
+# Archivos específicos de NetBeans (Configuraciones de usuario)
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# Archivos de sistema
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
