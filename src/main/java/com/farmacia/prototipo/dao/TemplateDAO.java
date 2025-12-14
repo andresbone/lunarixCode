@@ -9,7 +9,6 @@ import java.util.Optional;
 
 public abstract class TemplateDAO<T> {
 
-    // Functional Interfaces
     @FunctionalInterface
     protected interface RowMapper<T> {
         T mapRow(ResultSet rs) throws SQLException;

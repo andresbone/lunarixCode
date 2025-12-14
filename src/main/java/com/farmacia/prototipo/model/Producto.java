@@ -5,9 +5,9 @@ package com.farmacia.prototipo.model;
 */
 
 import java.math.BigDecimal;
-import lombok.AllArgsConstructor; //Crea el constructor con todos los datos.
-import lombok.Data; //Genera automáticamente Getters, Setters, toString, equals y hashCode.
-import lombok.NoArgsConstructor; //Crea el constructor vacío: public Producto() {}
+import lombok.AllArgsConstructor;
+import lombok.Data; 
+import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor

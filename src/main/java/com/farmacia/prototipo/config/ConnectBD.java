@@ -25,7 +25,7 @@ public class ConnectBD {
             System.out.println(">>> ¡Conexion exitosa a la base de datos! <<<");
 
         } catch (ClassNotFoundException e) {
-            System.out.println("Error: No se encontró el Driver. ¿Agregaste la librería?");
+            System.out.println("Error: No se encontró el Driver.");
         } catch (SQLException e) {
             System.err.print("Error de SQL: " + e.getMessage());
         }

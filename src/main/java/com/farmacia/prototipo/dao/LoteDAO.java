@@ -55,7 +55,6 @@ public class LoteDAO extends TemplateDAO<Lote> {
         return lot;
     };
 
-    //obtener 1 lote por ID
     public Optional<Lote> obtenerPorId(int idLote) {
         return querySingle(SQL_GET_BY_ID,
                 ps -> ps.setInt(1, idLote),
@@ -63,13 +62,11 @@ public class LoteDAO extends TemplateDAO<Lote> {
         );
     }
 
-    //Inventario completo ordenado por fecha
     public List<Lote> obtenerInventario() {
         return queryList(SQL_INVENTARIO, ps -> {
         }, MAPPER);
     }
 
-    //Lotes por producto (para determinar desde qué lote vender)
     public List<Lote> obtenerLotesPorProducto(int idProducto) {
         return queryList(SQL_LOTES_POR_PRODUCTO,
                 ps -> ps.setInt(1, idProducto),
@@ -77,7 +74,6 @@ public class LoteDAO extends TemplateDAO<Lote> {
         );
     }
 
-    //Insertar un lote nuevo
     public boolean insertarLote(Lote lote) {
         return update(SQL_INSERT, ps -> {
             ps.setInt(1, lote.getIdProducto());
@@ -88,7 +84,6 @@ public class LoteDAO extends TemplateDAO<Lote> {
         });
     }
 
-     //Restar cantidad de un lote (se usa en ventas)
     public boolean restarCantidad(int idLote, int cantidad) {
         return update(SQL_DESCONTAR_STOCK, ps -> {
             ps.setInt(1, cantidad);
